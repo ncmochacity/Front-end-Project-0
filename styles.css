@@ -1,0 +1,219 @@
+*{
+  box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -o-box-sizing:border-box;
+  margin:0;
+  padding:0;
+  border:0;
+}
+html,body{
+  width:100%;
+  height:100%;
+}
+body {
+  font-family:"Raleway",sans-serif;
+  font-size:1.5em;
+  margin: 0;
+}
+
+.content {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+
+/* HEADING */
+
+.header-content {
+  height: 100%;
+
+}
+.header-content h1{
+  color:#e9ece5;
+  font-family:"Montserrat",sans-serif;
+  font-size:2em;
+  width:100%;
+  text-align: center;
+  display:block;
+  font-weight:700;
+}
+
+header {
+  background-color: #3b3a36;
+  height: 25vw;
+  max-height: 150px;
+  width: 100%;
+}
+
+.udacity-logo {
+  max-height: 100%;
+  width: 20%;
+  float: left;
+}
+.vertical-line{
+  font-size:4em;
+  float:left;
+  color:#e9ece5;
+  margin-left:.2em;
+}
+h1 {
+  width: 100%;
+  display:block;
+  font-weight: normal;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 380px) {
+  h1 {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 464px) and (min-width: 381px) {
+  h1 {
+    font-size: 32px;
+  }
+}
+
+@media screen and (min-width: 465px) {
+  h1 {
+    font-size: 36px;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  .header-content {
+    padding-top: 15px;
+  }
+}
+
+@media screen and (max-width: 549px) {
+  .header-content {
+    padding-top: 5px;
+  }
+}
+
+
+/* MAIN SECTIONS */
+
+.hero {
+  padding: 1em;
+  max-width: 100%;
+  background-color: #c0dfd9;
+  color: white;
+  line-height: 2.5em;
+  letter-spacing:5px;
+  font-family:"Raleway",sans-serif;
+  font-weight:100;
+}
+
+.my-picture {
+  display: block;
+  margin: 0 auto 10px;
+  width: 100%;
+  width:250px;
+  height:250px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.iama {
+  max-width: 100%;
+  color: #5a5c51;
+  font-family:"Montserrat",sans-serif;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin: 0;
+  font-size:0.8em;
+  font-weight:700;
+  padding-top:1em;
+}
+
+.my-info {
+  max-width: 100%;
+  margin: 0 auto 20px;
+}
+
+.my-info:last-of-type {
+  margin: 0;
+}
+
+.my-name,.my-info {
+  color: #9fa8a3;
+  font-weight:400;
+  font-size:1.5em;
+  font-weight:200;
+  text-transform: uppercase;
+  font-family:"Raleway",sans-serif;
+}
+
+.about-me {
+  text-align: center;
+  line-height: 2.5em;
+  background: #e9ece5;
+  width:100%;
+  padding: 1em;
+}
+/* CSS3 animations START HERE */
+@-webkit-keyframes fadeIn { 
+  from 
+  { opacity:0; 
+    } 
+  to 
+  {opacity: 1;
+  } 
+}
+@-moz-keyframes fadeIn { 
+  from { opacity:0; 
+    } 
+  to {opacity: 1;
+  } 
+}
+@keyframes fadeIn { 
+  from { opacity:0; 
+  } 
+  to {opacity: 1;
+  }
+}
+.my-picture, .iama, .my-name, .my-info{
+  opacity:0;
+}
+
+/* use fadeIn animation, timing function:ease-in and repeats 1 time */
+.animate, .scroll-down{
+-moz-transition: 3s ease-in-out;
+-webkit-transition: 3s ease-in-out;
+-o-transition:3s ease-in-out;
+transition: 3s ease-in-out;
+/* use fadeIn animation defined, timing function: ease-in and repeat only 1 time*/
+  -moz-animation: fadeIn ease-in-out 1;
+  -webkit-animation: fadeIn ease-in-out 1;
+  animation: fadeIn ease-in-out 1;
+  -oanimation: fadeIn ease-in-out 1;
+/*make sure that animation remains at the last keyframe: opacity: 1 when its complete */
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -o-animation-fill-mode:forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 3s;
+  -moz-animation-duration: 3s;  
+  animation-duration: 3s;
+  -o-animation-duration:3s;
+}
+.scroll-down{
+  -webkit-transform:5s ease-in-out;
+  -moz-transform:5s ease-in-out;
+  -o-transform:5s ease-in-out;
+  transform:5s ease-in-out;
+}
+.my-picture .animate{
+  -webkit-transform:translate(14em,0);
+  -moz-transform:translate(14em,0);
+  -o-transform:translate(14em,0);
+  transform:translate(14em,0);
+}
