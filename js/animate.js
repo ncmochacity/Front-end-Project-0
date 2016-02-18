@@ -6,7 +6,7 @@ $(document).ready(function(){
 				$(".my-picture").addClass("animate");
 			},100);
 		}
-		if(x >=200){
+		if(x >=100){
 			$("#fadein").addClass("scroll-down");
 			setTimeout(function(){
 				$(".iama").addClass("scroll-down");
@@ -16,7 +16,29 @@ $(document).ready(function(){
 			},600);
 			setTimeout(function(){
 				$(".my-info").addClass("scroll-down");
-			},900);
+			},700);
 		}
+		if(x>=120){
+			setTimeout(function(){
+				$(".job").addClass("scroll-down");
+			},300);
+		}
+		if(x>=200){
+			setTimeout(function(){
+				$(".location").addClass("scroll-down");
+			},400);
+		}
+		if(x>=400){
+			setTimeout(function(){
+				$(".work").addClass("scroll-down");
+			},500);
+
+		}
+		if(x>=580){
+			setTimeout(function(){
+				$(".interests").addClass("scroll-down");
+			},600);
+		}
+		
 	})
 })
